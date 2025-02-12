@@ -8,13 +8,28 @@ module.exports = function() {
     return {
         apps: [
             'superdesk-planning',
+            'superdesk-publisher',
         ],
         importApps: [
             '../index',
             'superdesk-planning',
+            'superdesk-publisher',
         ],
 
         defaultRoute: '/workspace/monitoring',
+
+        publisher: {
+            protocol: 'https',
+            tenant: '',
+            domain: 'dna-staging-publisher.superdesk.pro',
+            base: 'api/v2',
+            wsProtocol: 'wss',
+            wsDomain: 'dna-staging-publisher.superdesk.pro',
+            wsPath: '/ws',
+            wsPort: '80',
+            hideContentRoutesInPublishPane: false,
+            hideCustomRoutesInPublishPane: false
+        },
 
         langOverride: {
             en: {
